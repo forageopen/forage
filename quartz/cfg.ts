@@ -1,3 +1,4 @@
+```ts
 import { ValidDateType } from "./components/Date"
 import { QuartzComponent } from "./components/types"
 import { ValidLocale } from "./i18n"
@@ -125,28 +126,28 @@ export const globalConfig: GlobalConfiguration = {
 
   defaultDateType: "created",
 
-  baseUrl: "forageopen.github.io/forage",
+  baseUrl: "https://forageopen.github.io/forage/",
 
   theme: {
     typography: {
       header: "JetBrains Mono",
-      body: "Inter",
+      body: "JetBrains Mono",
       code: "JetBrains Mono",
     },
 
     colors: {
       lightMode: {
-        light: "#0b0f14",
-        lightgray: "#10151c",
-        gray: "#1b2430",
+        light: "#05070a",
+        lightgray: "#0b0f14",
+        gray: "#111827",
         darkgray: "#7dd3fc",
         dark: "#e0f2fe",
 
         secondary: "#00bfff",
         tertiary: "#38bdf8",
 
-        highlight: "rgba(0,191,255,0.10)",
-        textHighlight: "rgba(0,191,255,0.30)",
+        highlight: "rgba(0,191,255,0.12)",
+        textHighlight: "rgba(0,191,255,0.35)",
       },
 
       darkMode: {
@@ -167,3 +168,4 @@ export const globalConfig: GlobalConfiguration = {
 
   locale: "en-US",
 }
+```
