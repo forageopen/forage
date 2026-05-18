@@ -117,5 +117,41 @@ export const globalConfig: GlobalConfiguration = {
 
   defaultDateType: "created",
 
+  baseUrl: "foragedeepmind.org",
+
+  theme: {
+    typography: {
+      header: "Inter",
+      body: "Inter",
+      code: "JetBrains Mono",
+    },
+
+    colors: {
+      lightMode: {
+        light: "#f5f7fa",
+        lightgray: "#d6dce5",
+        gray: "#7b8794",
+        darkgray: "#334155",
+        dark: "#111827",
+        secondary: "#00bfff",
+        tertiary: "#38bdf8",
+        highlight: "rgba(0,191,255,0.12)",
+        textHighlight: "rgba(0,191,255,0.22)",
+      },
+
+      darkMode: {
+        light: "#1a1f24",
+        lightgray: "#2b3138",
+        gray: "#7c8796",
+        darkgray: "#d7e1ea",
+        dark: "#f5fbff",
+        secondary: "#00bfff",
+        tertiary: "#4fd8ff",
+        highlight: "rgba(0,191,255,0.15)",
+        textHighlight: "rgba(0,191,255,0.35)",
+      },
+    },
+  },
+
   locale: "en-US",
 }
