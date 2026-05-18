@@ -59,26 +59,28 @@ export type Analytics =
 export interface GlobalConfiguration {
   pageTitle: string
   pageTitleSuffix?: string
-  /** Whether to enable single-page-app style rendering. this prevents flashes of unstyled content and improves smoothness of Quartz */
+
+  /** Whether to enable single-page-app style rendering */
   enableSPA: boolean
-  /** Whether to display Wikipedia-style popovers when hovering over links */
+
+  /** Whether to display Wikipedia-style popovers */
   enablePopovers: boolean
+
   /** Analytics mode */
   analytics: Analytics
+
   /** Glob patterns to not search */
   ignorePatterns: string[]
-  /** Whether to use created, modified, or published as the default type of date */
+
+  /** Default date type */
   defaultDateType: ValidDateType
-  /** Base URL to use for CNAME files, sitemaps, and RSS feeds that require an absolute URL.
-   * Quartz will avoid using this as much as possible and use relative URLs most of the time
-   */
+
+  /** Base URL */
   baseUrl?: string
+
   theme: Theme
 
-  /**
-   * Allow to translate the date in the language of your choice.
-   * Also used for UI translation (default: en-US)
-   */
+  /** Locale */
   locale: ValidLocale
 }
 
@@ -98,7 +100,10 @@ export interface FullPageLayout {
   footer: QuartzComponent
 }
 
-export type PageLayout = Pick<FullPageLayout, "beforeBody" | "left" | "right">
+export type PageLayout = Pick<
+  FullPageLayout,
+  "beforeBody" | "left" | "right"
+>
 
 export type SharedLayout = Pick<
   FullPageLayout,
@@ -107,9 +112,11 @@ export type SharedLayout = Pick<
 
 export const globalConfig: GlobalConfiguration = {
   pageTitle: "Forage DeepMind",
+
   pageTitleSuffix: "Faculty of Applied Intelligence",
 
   enableSPA: true,
+
   enablePopovers: true,
 
   analytics: null,
@@ -122,37 +129,37 @@ export const globalConfig: GlobalConfiguration = {
 
   theme: {
     typography: {
-      header: "Inter",
+      header: "JetBrains Mono",
       body: "Inter",
       code: "JetBrains Mono",
     },
 
     colors: {
       lightMode: {
-        light: "#f4f7fb",
-        lightgray: "#d7dee7",
-        gray: "#7b8794",
-        darkgray: "#334155",
-        dark: "#111827",
+        light: "#0b0f14",
+        lightgray: "#10151c",
+        gray: "#1b2430",
+        darkgray: "#7dd3fc",
+        dark: "#e0f2fe",
 
-        secondary: "#009dff",
+        secondary: "#00bfff",
         tertiary: "#38bdf8",
 
-        highlight: "rgba(0,157,255,0.12)",
-        textHighlight: "rgba(0,157,255,0.22)",
+        highlight: "rgba(0,191,255,0.10)",
+        textHighlight: "rgba(0,191,255,0.30)",
       },
 
       darkMode: {
-        light: "#1b1f24",
-        lightgray: "#2b3138",
-        gray: "#7c8796",
-        darkgray: "#d7e1ea",
-        dark: "#f5fbff",
+        light: "#05070a",
+        lightgray: "#0b0f14",
+        gray: "#111827",
+        darkgray: "#7dd3fc",
+        dark: "#e0f2fe",
 
         secondary: "#00bfff",
-        tertiary: "#4fd8ff",
+        tertiary: "#38bdf8",
 
-        highlight: "rgba(0,191,255,0.15)",
+        highlight: "rgba(0,191,255,0.12)",
         textHighlight: "rgba(0,191,255,0.35)",
       },
     },
