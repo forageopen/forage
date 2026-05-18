@@ -70,17 +70,14 @@ export interface GlobalConfiguration {
   /** Whether to use created, modified, or published as the default type of date */
   defaultDateType: ValidDateType
   /** Base URL to use for CNAME files, sitemaps, and RSS feeds that require an absolute URL.
-   *   Quartz will avoid using this as much as possible and use relative URLs most of the time
+   * Quartz will avoid using this as much as possible and use relative URLs most of the time
    */
   baseUrl?: string
   theme: Theme
+
   /**
    * Allow to translate the date in the language of your choice.
    * Also used for UI translation (default: en-US)
-   * Need to be formatted following BCP 47: https://en.wikipedia.org/wiki/IETF_language_tag
-   * The first part is the language (en) and the second part is the script/region (US)
-   * Language Codes: https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
-   * Region Codes: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
    */
   locale: ValidLocale
 }
@@ -102,7 +99,11 @@ export interface FullPageLayout {
 }
 
 export type PageLayout = Pick<FullPageLayout, "beforeBody" | "left" | "right">
-export type SharedLayout = Pick<FullPageLayout, "head" | "header" | "footer" | "afterBody">
+
+export type SharedLayout = Pick<
+  FullPageLayout,
+  "head" | "header" | "footer" | "afterBody"
+>
 
 export const globalConfig: GlobalConfiguration = {
   pageTitle: "Forage DeepMind",
@@ -117,7 +118,7 @@ export const globalConfig: GlobalConfiguration = {
 
   defaultDateType: "created",
 
-  baseUrl: "foragedeepmind.org",
+  baseUrl: "forageopen.github.io/forage",
 
   theme: {
     typography: {
@@ -128,25 +129,29 @@ export const globalConfig: GlobalConfiguration = {
 
     colors: {
       lightMode: {
-        light: "#f5f7fa",
-        lightgray: "#d6dce5",
+        light: "#f4f7fb",
+        lightgray: "#d7dee7",
         gray: "#7b8794",
         darkgray: "#334155",
         dark: "#111827",
-        secondary: "#00bfff",
+
+        secondary: "#009dff",
         tertiary: "#38bdf8",
-        highlight: "rgba(0,191,255,0.12)",
-        textHighlight: "rgba(0,191,255,0.22)",
+
+        highlight: "rgba(0,157,255,0.12)",
+        textHighlight: "rgba(0,157,255,0.22)",
       },
 
       darkMode: {
-        light: "#1a1f24",
+        light: "#1b1f24",
         lightgray: "#2b3138",
         gray: "#7c8796",
         darkgray: "#d7e1ea",
         dark: "#f5fbff",
+
         secondary: "#00bfff",
         tertiary: "#4fd8ff",
+
         highlight: "rgba(0,191,255,0.15)",
         textHighlight: "rgba(0,191,255,0.35)",
       },
