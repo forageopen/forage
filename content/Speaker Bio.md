@@ -1,0 +1,1 @@
+Adam Rosman is an educator, designer, and researcher based in Cyberjaya, Malaysia. His work is grounded in effective altruism, the belief that knowledge only becomes substantial when it reaches the people who need it most.
