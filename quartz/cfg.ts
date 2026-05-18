@@ -103,3 +103,19 @@ export interface FullPageLayout {
 
 export type PageLayout = Pick<FullPageLayout, "beforeBody" | "left" | "right">
 export type SharedLayout = Pick<FullPageLayout, "head" | "header" | "footer" | "afterBody">
+
+export const globalConfig: GlobalConfiguration = {
+  pageTitle: "Forage DeepMind",
+  pageTitleSuffix: "Faculty of Applied Intelligence",
+
+  enableSPA: true,
+  enablePopovers: true,
+
+  analytics: null,
+
+  ignorePatterns: [],
+
+  defaultDateType: "created",
+
+  locale: "en-US",
+}
